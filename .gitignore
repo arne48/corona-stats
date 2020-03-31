@@ -3,3 +3,4 @@ tests
 venv
 *.csv
 *.csv_ref
+*.log
