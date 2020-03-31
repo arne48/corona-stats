@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dbb810a-011a-4678-8698-3b6cb065f297" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1Z1cqJ2H94XXK8XuTlQPrxmsyX1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.corona_stats_gui">
+    <configuration name="corona_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <log_file alias="programmLog" path="$PROJECT_DIR$/corona_stats.log" />
+      <module name="corona-stats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/corona_stats.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="corona_stats_gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="corona-stats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/corona_stats_gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github_raw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="corona-stats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/github_raw.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tkinter_experiments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="corona-stats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/tkinter_experiments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in corona_stats_tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="corona-stats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/corona_stats_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.corona_stats" />
+      <item itemvalue="Python.github_raw" />
+      <item itemvalue="Python.tkinter_experiments" />
+      <item itemvalue="Python tests.Unittests in corona_stats_tests.py" />
+      <item itemvalue="Python.corona_stats_gui" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.corona_stats_gui" />
+        <item itemvalue="Python.corona_stats" />
+        <item itemvalue="Python.tkinter_experiments" />
+        <item itemvalue="Python tests.Unittests in corona_stats_tests.py" />
+        <item itemvalue="Python.github_raw" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dbb810a-011a-4678-8698-3b6cb065f297" name="Default Changelist" comment="" />
+      <created>1584010229378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584010229378</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="184" width="800" height="675" key="#Inspections" timestamp="1584011112465">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="555" y="184" width="800" height="675" key="#Inspections/0.0.1920.1046@0.0.1920.1046" timestamp="1584011112465" />
+    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584447245551">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1584447245551" />
+    <state x="743" y="231" width="424" height="582" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1584446996912">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="743" y="231" width="424" height="582" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1584446996912" />
+    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584447191600">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1046@0.0.1920.1046" timestamp="1584447191600" />
+    <state width="1897" height="238" key="GridCell.Tab.0.bottom" timestamp="1585670099399">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1585670099399" />
+    <state width="1897" height="238" key="GridCell.Tab.0.center" timestamp="1585670099397">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="238" key="GridCell.Tab.0.center/0.0.1920.1046@0.0.1920.1046" timestamp="1585670099397" />
+    <state width="1897" height="238" key="GridCell.Tab.0.left" timestamp="1585670099395">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="238" key="GridCell.Tab.0.left/0.0.1920.1046@0.0.1920.1046" timestamp="1585670099395" />
+    <state width="1897" height="238" key="GridCell.Tab.0.right" timestamp="1585670099398">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="238" key="GridCell.Tab.0.right/0.0.1920.1046@0.0.1920.1046" timestamp="1585670099398" />
+    <state width="1897" height="235" key="GridCell.Tab.1.bottom" timestamp="1585669917404">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="235" key="GridCell.Tab.1.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1585669917404" />
+    <state width="1897" height="235" key="GridCell.Tab.1.center" timestamp="1585669917404">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="235" key="GridCell.Tab.1.center/0.0.1920.1046@0.0.1920.1046" timestamp="1585669917404" />
+    <state width="1897" height="235" key="GridCell.Tab.1.left" timestamp="1585669917404">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="235" key="GridCell.Tab.1.left/0.0.1920.1046@0.0.1920.1046" timestamp="1585669917404" />
+    <state width="1897" height="235" key="GridCell.Tab.1.right" timestamp="1585669917404">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="235" key="GridCell.Tab.1.right/0.0.1920.1046@0.0.1920.1046" timestamp="1585669917404" />
+    <state width="1897" height="83" key="GridCell.Tab.2.bottom" timestamp="1585667345483">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="83" key="GridCell.Tab.2.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1585667345483" />
+    <state width="1897" height="83" key="GridCell.Tab.2.center" timestamp="1585667345483">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="83" key="GridCell.Tab.2.center/0.0.1920.1046@0.0.1920.1046" timestamp="1585667345483" />
+    <state width="1897" height="83" key="GridCell.Tab.2.left" timestamp="1585667345483">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="83" key="GridCell.Tab.2.left/0.0.1920.1046@0.0.1920.1046" timestamp="1585667345483" />
+    <state width="1897" height="83" key="GridCell.Tab.2.right" timestamp="1585667345483">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state width="1897" height="83" key="GridCell.Tab.2.right/0.0.1920.1046@0.0.1920.1046" timestamp="1585667345483" />
+    <state x="449" y="158" key="SettingsEditor" timestamp="1585663788479">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="449" y="158" key="SettingsEditor/0.0.1920.1046@0.0.1920.1046" timestamp="1585663788479" />
+    <state x="616" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1584027312144">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="616" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1584027312144" />
+    <state x="510" y="242" width="890" height="560" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584972310387">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="510" y="242" width="890" height="560" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1046@0.0.1920.1046" timestamp="1584972310387" />
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1585662360228">
+      <screen x="0" y="0" width="1920" height="1046" />
+    </state>
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1046@0.0.1920.1046" timestamp="1585662360228" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/tkinter_experiments.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
