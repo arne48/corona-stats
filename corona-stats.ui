@@ -1,206 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TabWidget</class>
- <widget class="QTabWidget" name="TabWidget">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1028</width>
-    <height>662</height>
+    <width>1033</width>
+    <height>885</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Corona Statistics</string>
   </property>
-  <property name="currentIndex">
-   <number>0</number>
-  </property>
-  <widget class="QWidget" name="tab_single_country">
-   <attribute name="title">
-    <string>Single Country</string>
-   </attribute>
-   <widget class="QCheckBox" name="chk_daily_inc_log1">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>570</y>
-      <width>151</width>
-      <height>22</height>
-     </rect>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>1011</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vlay_viz">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
     </property>
-    <property name="text">
-     <string>Daily Increase Log</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="chk_confirmed_cases_log1">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>550</y>
-      <width>181</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Confirmed Cases Log</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_plot1">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>570</y>
-      <width>99</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Plot</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_select">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>50</y>
-      <width>161</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Country Selection: </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_options1">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>530</y>
-      <width>66</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Options:</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="lst_country11">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>70</y>
-      <width>321</width>
-      <height>421</height>
-     </rect>
-    </property>
-   </widget>
+   </layout>
   </widget>
-  <widget class="QWidget" name="tab_compare_countries">
-   <attribute name="title">
-    <string>Compare Countries</string>
-   </attribute>
-   <widget class="QCheckBox" name="chk_confirmed_cases_log2">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>560</y>
-      <width>171</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Confirmed Cases Log</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_plot2">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>560</y>
-      <width>99</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Plot</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_country21">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>30</y>
-      <width>161</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>First Country Selection: </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_country22">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>30</y>
-      <width>181</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Second Country Selection: </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_options2">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>540</y>
-      <width>66</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Options:</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="lst_country21">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>60</y>
-      <width>321</width>
-      <height>421</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="lst_country22">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>60</y>
-      <width>321</width>
-      <height>421</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="tab_viz">
-   <attribute name="title">
-    <string>Visualization</string>
-   </attribute>
+  <widget class="QGroupBox" name="grp_limits">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>540</y>
+     <width>1001</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="title">
+    <string>Limits:</string>
+   </property>
    <widget class="QSlider" name="sld_min">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>550</y>
-      <width>861</width>
+      <x>0</x>
+      <y>30</y>
+      <width>831</width>
       <height>17</height>
      </rect>
     </property>
-    <property name="maximum">
-     <number>100</number>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -209,35 +68,239 @@
    <widget class="QSlider" name="sld_max">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>580</y>
-      <width>861</width>
+      <x>0</x>
+      <y>60</y>
+      <width>831</width>
       <height>17</height>
      </rect>
-    </property>
-    <property name="maximum">
-     <number>100</number>
-    </property>
-    <property name="value">
-     <number>100</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_options3">
+   <widget class="QLabel" name="lbl_sld_min">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>520</y>
-      <width>66</width>
+      <x>860</x>
+      <y>30</y>
+      <width>111</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>Options:</string>
+     <string>Min:</string>
     </property>
    </widget>
+   <widget class="QLabel" name="lbl_sld_max">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>60</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="grp_countries">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>650</y>
+     <width>1011</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Countries:</string>
+   </property>
+   <widget class="QListWidget" name="lst_country_main">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>271</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lst_country_sec">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>20</y>
+      <width>271</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_country_main">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>41</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Main</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_country_sec">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>20</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Secondary</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="grp_options">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>780</y>
+     <width>521</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Secondary Plotting Options:</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QRadioButton" name="tgl_plot_d_inc">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot Daily Increase</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="tgl_plot_inf_rt">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot Infection Rate</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="tgl_plot_recov">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot Recovered</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="tgl_plot_dead">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot Dead</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="tgl_compare_countries">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>60</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot secondary Country</string>
+    </property>
+   </widget>
+   <zorder>radioButton</zorder>
+   <zorder>tgl_plot_d_inc</zorder>
+   <zorder>tgl_plot_inf_rt</zorder>
+   <zorder>tgl_plot_recov</zorder>
+   <zorder>tgl_plot_dead</zorder>
+   <zorder>tgl_compare_countries</zorder>
+  </widget>
+  <widget class="QCheckBox" name="chk_cases_in_log">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Main in Log</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chk_second_in_log">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>500</y>
+     <width>151</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Secondary in Log</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_plot">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>810</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Plot</string>
+   </property>
   </widget>
  </widget>
  <resources/>

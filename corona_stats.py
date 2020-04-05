@@ -15,12 +15,12 @@ RECOVERED_FILE = get_file_from_link(DEFAULT_RECOVERED_PATH)
 
 CONFIRMED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(CONFIRMED_FILE))
 DEATH_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(DEATH_FILE))
-REOVERED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(RECOVERED_FILE))
+RECOVERED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(RECOVERED_FILE))
 
 
 def main():
     # Show single Country
-    show_single_country('Germany', CONFIRMED_DATA, DATE_FIELDS, show_daily_increase=True, cases_in_log=False,
+    show_single_country('Taiwan*', CONFIRMED_DATA, DATE_FIELDS, show_daily_increase=True, cases_in_log=False,
                         increases_in_log=False)
 
     # Compare two countries
