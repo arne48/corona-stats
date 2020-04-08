@@ -17,7 +17,11 @@ def get_slope(data, position):
 def get_linear_regression(data, dates):
     x_axis = np.arange(len(dates))
     m, b = np.polyfit(x_axis.astype(np.float64), data.astype(np.float64), 1)
-    return list(m * x + b for x in x_axis)
+    ret_val = list(m * x + b for x in x_axis)
+    # Set negative values to zero
+    ret_val = np.array(ret_val)
+    ret_val[ret_val < 0] = 0
+    return ret_val
 
 
 def get_daily_change(data):

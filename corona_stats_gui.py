@@ -5,7 +5,10 @@ from utilities import get_names_of_countries
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
+import logging
 import random
+
+logging.basicConfig(filename='corona_stats.log', level=logging.INFO)
 
 
 class MplCanvas(FigureCanvas):
@@ -27,7 +30,8 @@ class MplCanvas(FigureCanvas):
     def compute_initial_figure(self):
         self.axes.plot([], [], 'r')
 
-    def update_figure(self, cases, dates, sec_data=None, cases_log=False, sec_log=False, sec_label=''):
+    def update_figure(self, cases, dates, sec_data=None, cases_log=False, sec_log=False, sec_label='',
+                      sec_lin_reg=False):
         self.axes.cla()
         self.axes.set_ylabel('Confirmed', color=self.main_color)
         self.axes.tick_params(axis='y', labelcolor=self.main_color)
@@ -46,7 +50,9 @@ class MplCanvas(FigureCanvas):
             if sec_log:
                 self.ax2.set_yscale('log')
             self.ax2.plot(dates, sec_data, label=sec_label, color=self.secondary_color)
-
+            if sec_lin_reg:
+                regression_data = get_linear_regression(np.array(sec_data), dates)
+                self.ax2.plot(dates, regression_data, label='LinReg', color='green')
         self.draw()
 
 
@@ -108,6 +114,9 @@ def plot_with_options():
     primary_in_log = form.chk_cases_in_log.isChecked()
     secondary_in_log = form.chk_second_in_log.isChecked()
 
+    # Check for Linear Regression
+    secondary_linear_regression = form.chk_second_lin_reg.isChecked()
+
     # Check for Secondary Data
     secondary_data = None
     secondary_data_label = ''
@@ -137,7 +146,8 @@ def plot_with_options():
         limited_secondary_data = None
 
     visualization.update_figure(limited_primary_data, limited_dates, sec_data=limited_secondary_data,
-                                cases_log=primary_in_log, sec_log=secondary_in_log, sec_label=secondary_data_label)
+                                cases_log=primary_in_log, sec_log=secondary_in_log, sec_label=secondary_data_label,
+                                sec_lin_reg=secondary_linear_regression)
 
 
 def set_box_enabled(box, enabled):
@@ -158,8 +168,10 @@ def compare_handler():
 def option_handler():
     if form.grp_options.isChecked():
         set_box_enabled(form.chk_second_in_log, True)
+        set_box_enabled(form.chk_second_lin_reg, True)
     else:
         set_box_enabled(form.chk_second_in_log, False)
+        set_box_enabled(form.chk_second_lin_reg, False)
         form.lst_country_sec.setEnabled(False)
 
 

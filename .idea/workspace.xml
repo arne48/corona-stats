@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dbb810a-011a-4678-8698-3b6cb065f297" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/corona-stats-guiv2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtCore.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtDBus.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtGui.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtNetwork.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtOpenGL.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtPrintSupport.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtSql.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtTest.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtWidgets.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/QtXml.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/__init__.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5-stubs/sip.pyi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5_stubs-5.14.1.0-py3.6.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5_stubs-5.14.1.0-py3.6.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5_stubs-5.14.1.0-py3.6.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5_stubs-5.14.1.0-py3.6.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/PyQt5_stubs-5.14.1.0-py3.6.egg-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/corona-stats.ui" beforeDir="false" afterPath="$PROJECT_DIR$/corona-stats.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corona_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/corona_stats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/corona_stats_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/corona_stats_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +97,7 @@
       <method v="2" />
     </configuration>
     <configuration name="corona_stats_gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <log_file alias="Log" path="$PROJECT_DIR$/corona_stats.log" />
       <module name="corona-stats" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,11 +161,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.corona-stats-guiv2" />
       <item itemvalue="Python.corona_stats" />
-      <item itemvalue="Python.tkinter_experiments" />
       <item itemvalue="Python.corona_stats_gui" />
       <item itemvalue="Python.embed_mpl" />
-      <item itemvalue="Python.corona-stats-guiv2" />
+      <item itemvalue="Python.tkinter_experiments" />
     </list>
     <recent_temporary>
       <list>
@@ -214,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state x="555" y="184" width="800" height="675" key="#Inspections/0.0.1920.1046@0.0.1920.1046" timestamp="1586008964762" />
-    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584447245551">
+    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586269557034">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1584447245551" />
+    <state x="418" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1586269557034" />
     <state x="743" y="231" width="424" height="582" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1584446996912">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
@@ -226,42 +210,46 @@
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state x="503" y="0" width="895" height="1044" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1046@0.0.1920.1046" timestamp="1586010070271" />
-    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584447191600">
+    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl" timestamp="1586269520986">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1046@0.0.1920.1046" timestamp="1584447191600" />
-    <state width="1897" height="129" key="GridCell.Tab.0.bottom" timestamp="1586097393678">
+    <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1046@0.0.1920.1046" timestamp="1586269520986" />
+    <state width="1897" height="129" key="GridCell.Tab.0.bottom" timestamp="1586331215281">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586331215281" />
+    <state width="1897" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586322727626" />
+    <state width="1897" height="129" key="GridCell.Tab.0.center" timestamp="1586331215280">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="129" key="GridCell.Tab.0.center/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586331215280" />
+    <state width="1897" height="129" key="GridCell.Tab.0.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586322727626" />
+    <state width="1897" height="129" key="GridCell.Tab.0.left" timestamp="1586331215280">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="129" key="GridCell.Tab.0.left/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586331215280" />
+    <state width="1897" height="129" key="GridCell.Tab.0.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586322727625" />
+    <state width="1897" height="129" key="GridCell.Tab.0.right" timestamp="1586331215280">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="129" key="GridCell.Tab.0.right/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586331215280" />
+    <state width="1897" height="129" key="GridCell.Tab.0.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586322727626" />
+    <state width="1897" height="255" key="GridCell.Tab.1.bottom" timestamp="1586274198013">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state width="1897" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586097393678" />
-    <state width="1897" height="129" key="GridCell.Tab.0.center" timestamp="1586097393677">
+    <state width="1897" height="255" key="GridCell.Tab.1.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586274198013" />
+    <state width="1897" height="255" key="GridCell.Tab.1.center" timestamp="1586274198012">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state width="1897" height="129" key="GridCell.Tab.0.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586097393677" />
-    <state width="1897" height="129" key="GridCell.Tab.0.left" timestamp="1586097393676">
+    <state width="1897" height="255" key="GridCell.Tab.1.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586274198012" />
+    <state width="1897" height="255" key="GridCell.Tab.1.left" timestamp="1586274198012">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state width="1897" height="129" key="GridCell.Tab.0.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586097393676" />
-    <state width="1897" height="129" key="GridCell.Tab.0.right" timestamp="1586097393677">
+    <state width="1897" height="255" key="GridCell.Tab.1.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586274198012" />
+    <state width="1897" height="255" key="GridCell.Tab.1.right" timestamp="1586274198012">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
-    <state width="1897" height="129" key="GridCell.Tab.0.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586097393677" />
-    <state width="1897" height="255" key="GridCell.Tab.1.bottom" timestamp="1586094248858">
-      <screen x="0" y="0" width="1920" height="1046" />
-    </state>
-    <state width="1897" height="255" key="GridCell.Tab.1.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586094248858" />
-    <state width="1897" height="255" key="GridCell.Tab.1.center" timestamp="1586094248858">
-      <screen x="0" y="0" width="1920" height="1046" />
-    </state>
-    <state width="1897" height="255" key="GridCell.Tab.1.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586094248858" />
-    <state width="1897" height="255" key="GridCell.Tab.1.left" timestamp="1586094248858">
-      <screen x="0" y="0" width="1920" height="1046" />
-    </state>
-    <state width="1897" height="255" key="GridCell.Tab.1.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586094248858" />
-    <state width="1897" height="255" key="GridCell.Tab.1.right" timestamp="1586094248858">
-      <screen x="0" y="0" width="1920" height="1046" />
-    </state>
-    <state width="1897" height="255" key="GridCell.Tab.1.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586094248858" />
+    <state width="1897" height="255" key="GridCell.Tab.1.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586274198012" />
     <state width="1897" height="83" key="GridCell.Tab.2.bottom" timestamp="1585667345483">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
