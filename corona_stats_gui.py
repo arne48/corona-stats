@@ -37,7 +37,10 @@ class MplCanvas(FigureCanvas):
         self.axes.tick_params(axis='y', labelcolor=self.main_color)
         self.axes.set_xlabel('Date')
         self.axes.grid(color='b', linestyle='-', linewidth=0.2)
-        #plt.xticks(rotation=70)
+
+        # Rotate all labels individually
+        for tick in self.axes.get_xticklabels():
+            tick.set_rotation(70)
 
         if cases_log:
             self.axes.set_yscale('log')
