@@ -189,8 +189,8 @@ def connect_signals():
     form.btn_plot.clicked.connect(plot_with_options)
     form.tgl_compare_countries.toggled.connect(compare_handler)
     form.grp_options.clicked.connect(option_handler)
-    form.sld_max.sliderMoved.connect(max_slider_handler)
-    form.sld_min.sliderMoved.connect(min_slider_handler)
+    form.sld_max.valueChanged.connect(max_slider_handler)
+    form.sld_min.valueChanged.connect(min_slider_handler)
 
 
 populate_country_lists()

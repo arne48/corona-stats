@@ -20,7 +20,7 @@ RECOVERED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(RECOVERED_FILE))
 
 def main():
     # Show single Country
-    show_single_country('Taiwan*', CONFIRMED_DATA, DATE_FIELDS, show_daily_increase=True, cases_in_log=False,
+    show_single_country('Taiwan', CONFIRMED_DATA, DATE_FIELDS, show_daily_increase=True, cases_in_log=False,
                         increases_in_log=False)
 
     # Compare two countries
