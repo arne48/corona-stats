@@ -18,6 +18,7 @@ def get_linear_regression(data, dates):
     x_axis = np.arange(len(dates))
     m, b = np.polyfit(x_axis.astype(np.float64), data.astype(np.float64), 1)
     ret_val = list(m * x + b for x in x_axis)
+
     # Set negative values to zero
     ret_val = np.array(ret_val)
     ret_val[ret_val < 0] = 0
@@ -45,6 +46,3 @@ def get_infection_rate(data):
     logging.info('Last infection rate: ' + str(data_out[-1]))
     logging.info('Highest infection rate: ' + str(max(data_out)))
     return data_out
-
-
-

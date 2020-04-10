@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2dbb810a-011a-4678-8698-3b6cb065f297" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corona-stats.ui" beforeDir="false" afterPath="$PROJECT_DIR$/corona-stats.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corona_stats_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/corona_stats_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,26 +210,26 @@
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state x="743" y="281" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1046@0.0.1920.1046" timestamp="1586269520986" />
-    <state width="1897" height="256" key="GridCell.Tab.0.bottom" timestamp="1586512617186">
+    <state width="1897" height="256" key="GridCell.Tab.0.bottom" timestamp="1586512625950">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state width="1897" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586341156286" />
-    <state width="1897" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586512617186" />
-    <state width="1897" height="256" key="GridCell.Tab.0.center" timestamp="1586512617186">
+    <state width="1897" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1046@0.0.1920.1046" timestamp="1586512625950" />
+    <state width="1897" height="256" key="GridCell.Tab.0.center" timestamp="1586512625949">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state width="1897" height="129" key="GridCell.Tab.0.center/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586341156286" />
-    <state width="1897" height="256" key="GridCell.Tab.0.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586512617186" />
-    <state width="1897" height="256" key="GridCell.Tab.0.left" timestamp="1586512617186">
+    <state width="1897" height="256" key="GridCell.Tab.0.center/0.0.1920.1046@0.0.1920.1046" timestamp="1586512625949" />
+    <state width="1897" height="256" key="GridCell.Tab.0.left" timestamp="1586512625948">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state width="1897" height="129" key="GridCell.Tab.0.left/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586341156286" />
-    <state width="1897" height="256" key="GridCell.Tab.0.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586512617186" />
-    <state width="1897" height="256" key="GridCell.Tab.0.right" timestamp="1586512617186">
+    <state width="1897" height="256" key="GridCell.Tab.0.left/0.0.1920.1046@0.0.1920.1046" timestamp="1586512625948" />
+    <state width="1897" height="256" key="GridCell.Tab.0.right" timestamp="1586512625950">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
     <state width="1897" height="129" key="GridCell.Tab.0.right/0.0.1920.1046/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586341156286" />
-    <state width="1897" height="256" key="GridCell.Tab.0.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586512617186" />
+    <state width="1897" height="256" key="GridCell.Tab.0.right/0.0.1920.1046@0.0.1920.1046" timestamp="1586512625950" />
     <state width="1897" height="304" key="GridCell.Tab.1.bottom" timestamp="1586511848725">
       <screen x="0" y="0" width="1920" height="1046" />
     </state>
@@ -301,6 +301,10 @@
           <url>file://$PROJECT_DIR$/corona_stats_gui.py</url>
           <line>198</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/metrics.py</url>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

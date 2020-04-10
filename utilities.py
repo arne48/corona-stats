@@ -8,7 +8,7 @@ def rename_countries(data_frame, change_dict):
 
 
 def sanitize_data(data_in):
-    # Remove non important colums
+    # Remove non important columns
     data_out = data_in.sort_values(by=['Country/Region'], ignore_index=True)
     data_out = data_out.drop(['Province/State', 'Lat', 'Long'], 1)
 
