@@ -16,8 +16,11 @@ class MplCanvas(FigureCanvas):
         fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = fig.add_subplot(111)
         self.ax2 = self.axes.twinx()
-        self.main_color = 'blue'
+        self.primary_confirmed_color = 'blue'
+        self.primary_dead_color = 'orange'
+        self.primary_recovered_color = 'fuchsia'
         self.secondary_color = 'red'
+        self.secondary_linregg_color = 'green'
 
         #self.compute_initial_figure()
 
@@ -30,21 +33,18 @@ class MplCanvas(FigureCanvas):
     def compute_initial_figure(self):
         self.axes.plot([], [], 'r')
 
-    def update_figure(self, cases, dates, sec_data=None, cases_log=False, sec_log=False, sec_label='',
-                      sec_lin_reg=False):
+    def update_figure(self, prim_data, dates, prim_log=False, prim_dead=False, prim_dead_data=None, prim_recov=False,
+                      prim_recov_data=None, sec_data=None, sec_log=False, sec_label='', sec_lin_reg=False,
+                      sec_clear=False):
         self.axes.cla()
-        self.axes.set_ylabel('Confirmed', color=self.main_color)
-        self.axes.tick_params(axis='y', labelcolor=self.main_color)
+        self.axes.set_ylabel('Confirmed', color=self.primary_confirmed_color)
+        self.axes.tick_params(axis='y', labelcolor=self.primary_confirmed_color)
         self.axes.set_xlabel('Date')
         self.axes.grid(color='b', linestyle='-', linewidth=0.2)
 
         # Rotate all labels individually
         for tick in self.axes.get_xticklabels():
             tick.set_rotation(70)
-
-        if cases_log:
-            self.axes.set_yscale('log')
-        self.axes.plot(dates, cases, label='cases', color=self.main_color)
 
         if sec_data is not None:
             self.ax2.cla()
@@ -55,7 +55,22 @@ class MplCanvas(FigureCanvas):
             self.ax2.plot(dates, sec_data, label=sec_label, color=self.secondary_color)
             if sec_lin_reg:
                 regression_data = get_linear_regression(np.array(sec_data), dates)
-                self.ax2.plot(dates, regression_data, label='LinReg', color='green')
+                self.ax2.plot(dates, regression_data, label='LinReg', color=self.secondary_linregg_color)
+        elif sec_clear:
+            self.ax2.cla()
+
+        # Plot primary data after secondary data so axis.cla() doesn't fuck up the graph
+        if prim_log:
+            self.axes.set_yscale('log')
+
+        self.axes.plot(dates, prim_data, label='confirmed', color=self.primary_confirmed_color)
+
+        if prim_dead:
+            self.axes.plot(dates, prim_dead_data, label='dead', color=self.primary_dead_color)
+
+        if prim_recov:
+            self.axes.plot(dates, prim_recov_data, label='recovered', color=self.primary_recovered_color)
+
         self.draw()
 
 
@@ -113,6 +128,12 @@ def plot_with_options():
     country_name = form.lst_country_main.selectedItems()[0].text()
     primary_data = get_data_of_country(CONFIRMED_DATA, country_name)
 
+    # Check for additional Primary Data
+    plot_primary_dead = form.chk_main_plt_dead.isChecked()
+    limited_primary_dead = None
+    plot_primary_recovered = form.chk_main_plt_recov.isChecked()
+    limited_primary_recovered = None
+
     # Check for log settings
     primary_in_log = form.chk_cases_in_log.isChecked()
     secondary_in_log = form.chk_second_in_log.isChecked()
@@ -123,7 +144,9 @@ def plot_with_options():
     # Check for Secondary Data
     secondary_data = None
     secondary_data_label = ''
+
     if form.grp_options.isChecked():
+        secondary_clear = False
         if form.tgl_plot_d_inc.isChecked():
             secondary_data = get_daily_change(primary_data)
             secondary_data_label = 'Daily Increase'
@@ -140,17 +163,30 @@ def plot_with_options():
             secondary_country_name = form.lst_country_sec.selectedItems()[0].text()
             secondary_data = get_data_of_country(CONFIRMED_DATA, secondary_country_name)
             secondary_data_label = secondary_country_name
+    else:
+        secondary_clear = True
 
     limited_primary_data = primary_data[min_value:max_value]
     limited_dates = DATE_FIELDS[min_value:max_value]
+
+    if plot_primary_dead:
+        primary_dead = get_data_of_country(DEATH_DATA, country_name)
+        limited_primary_dead = primary_dead[min_value:max_value]
+    if plot_primary_recovered:
+        primary_recovered = get_data_of_country(RECOVERED_DATA, country_name)[min_value:max_value]
+        limited_primary_recovered = primary_recovered[min_value:max_value]
+
     if secondary_data is not None:
         limited_secondary_data = secondary_data[min_value:max_value]
     else:
         limited_secondary_data = None
 
-    visualization.update_figure(limited_primary_data, limited_dates, sec_data=limited_secondary_data,
-                                cases_log=primary_in_log, sec_log=secondary_in_log, sec_label=secondary_data_label,
-                                sec_lin_reg=secondary_linear_regression)
+    visualization.update_figure(limited_primary_data, limited_dates, prim_log=primary_in_log,
+                                prim_dead=plot_primary_dead, prim_dead_data=limited_primary_dead,
+                                prim_recov=plot_primary_recovered, prim_recov_data=limited_primary_recovered,
+                                sec_data=limited_secondary_data, sec_log=secondary_in_log,
+                                sec_label=secondary_data_label, sec_lin_reg=secondary_linear_regression,
+                                sec_clear=secondary_clear)
 
 
 def set_box_enabled(box, enabled):
