@@ -56,6 +56,8 @@ class MplCanvas(FigureCanvas):
             if sec_lin_reg:
                 regression_data = get_linear_regression(np.array(sec_data), dates)
                 self.ax2.plot(dates, regression_data, label='LinReg', color=self.secondary_linregg_color)
+
+            self.ax2.legend(loc=1)
         elif sec_clear:
             self.ax2.cla()
 
@@ -63,14 +65,15 @@ class MplCanvas(FigureCanvas):
         if prim_log:
             self.axes.set_yscale('log')
 
-        self.axes.plot(dates, prim_data, label='confirmed', color=self.primary_confirmed_color)
+        self.axes.plot(dates, prim_data, label='Confirmed', color=self.primary_confirmed_color)
 
         if prim_dead:
-            self.axes.plot(dates, prim_dead_data, label='dead', color=self.primary_dead_color)
+            self.axes.plot(dates, prim_dead_data, label='Dead', color=self.primary_dead_color)
 
         if prim_recov:
-            self.axes.plot(dates, prim_recov_data, label='recovered', color=self.primary_recovered_color)
+            self.axes.plot(dates, prim_recov_data, label='Recovered', color=self.primary_recovered_color)
 
+        self.axes.legend(loc=2)
         self.draw()
 
 
