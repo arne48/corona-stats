@@ -31,9 +31,9 @@
   <widget class="QGroupBox" name="grp_limits">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>540</y>
-     <width>1211</width>
+     <width>1201</width>
      <height>91</height>
     </rect>
    </property>
@@ -108,9 +108,9 @@
   <widget class="QGroupBox" name="grp_countries">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>650</y>
-     <width>1211</width>
+     <x>10</x>
+     <y>640</y>
+     <width>1201</width>
      <height>131</height>
     </rect>
    </property>
@@ -170,9 +170,9 @@
   <widget class="QGroupBox" name="grp_options">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>780</y>
-     <width>1081</width>
+     <width>1071</width>
      <height>91</height>
     </rect>
    </property>
@@ -257,14 +257,14 @@
   <widget class="QCheckBox" name="chk_cases_in_log">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>80</x>
      <y>500</y>
      <width>111</width>
      <height>22</height>
     </rect>
    </property>
    <property name="text">
-    <string>Main in Log</string>
+    <string>Plot in Log</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="chk_second_in_log">
@@ -273,14 +273,14 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>830</x>
+     <x>920</x>
      <y>500</y>
      <width>151</width>
      <height>22</height>
     </rect>
    </property>
    <property name="text">
-    <string>Secondary in Log</string>
+    <string>Plot in Log</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_plot">
@@ -302,14 +302,92 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>980</x>
+     <x>1020</x>
      <y>500</y>
-     <width>221</width>
+     <width>181</width>
      <height>22</height>
     </rect>
    </property>
    <property name="text">
-    <string>Secondary Linear Regression</string>
+    <string>Plot Linear Regression</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chk_main_plt_dead">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>500</y>
+     <width>95</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Plot Dead</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chk_main_plt_recov">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>500</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Plot Recovered</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_sec_plt_brc_1">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>500</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Secondary Plot(</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_sec_plt_brc_2">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>500</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_main_plt_brc_1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Main Plot(</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_main_plt_brc_2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>500</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>)</string>
    </property>
   </widget>
  </widget>
