@@ -57,7 +57,7 @@ class MplCanvas(FigureCanvas):
                 regression_data = get_linear_regression(np.array(sec_data), dates)
                 self.ax2.plot(dates, regression_data, label='LinReg', color=self.secondary_linregg_color)
 
-            self.ax2.legend(loc=1)
+            self.ax2.legend(loc=9)
         elif sec_clear:
             self.ax2.cla()
 
