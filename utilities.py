@@ -4,6 +4,7 @@ def rename_countries(data_frame, change_dict):
         df_new = data_frame.loc[data_frame['Country/Region'] == old_name]
         df_new['Country/Region'] = change_dict[old_name]
         data_frame.update(df_new)
+        #data_frame.loc[data_frame['Country/Region'] == old_name]['Country/Region'] = change_dict[old_name]
     return data_frame
 
 

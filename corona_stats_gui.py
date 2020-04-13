@@ -176,7 +176,7 @@ def plot_with_options():
         primary_dead = get_data_of_country(DEATH_DATA, country_name)
         limited_primary_dead = primary_dead[min_value:max_value]
     if plot_primary_recovered:
-        primary_recovered = get_data_of_country(RECOVERED_DATA, country_name)[min_value:max_value]
+        primary_recovered = get_data_of_country(RECOVERED_DATA, country_name)
         limited_primary_recovered = primary_recovered[min_value:max_value]
 
     if secondary_data is not None:
