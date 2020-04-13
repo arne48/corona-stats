@@ -20,7 +20,7 @@ class MplCanvas(FigureCanvas):
         self.primary_dead_color = 'orange'
         self.primary_recovered_color = 'fuchsia'
         self.secondary_color = 'red'
-        self.secondary_linregg_color = 'green'
+        self.secondary_linreg_color = 'green'
 
         #self.compute_initial_figure()
 
@@ -55,7 +55,7 @@ class MplCanvas(FigureCanvas):
             self.ax2.plot(dates, sec_data, label=sec_label, color=self.secondary_color)
             if sec_lin_reg:
                 regression_data = get_linear_regression(np.array(sec_data), dates)
-                self.ax2.plot(dates, regression_data, label='LinReg', color=self.secondary_linregg_color)
+                self.ax2.plot(dates, regression_data, label='LinReg', color=self.secondary_linreg_color)
 
             self.ax2.legend(loc=9)
         elif sec_clear:
