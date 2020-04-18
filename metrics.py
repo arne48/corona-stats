@@ -43,6 +43,7 @@ def get_infection_rate(data):
             except ZeroDivisionError:
                 data_out.append(float(data[n-1]))
     data_out.append(data_out[-1])
-    print('Last infection rate: ' + str(data_out[-1]))
-    print('Highest infection rate: ' + str(max(data_out)))
-    return data_out
+    #print('Last infection rate: ' + str(data_out[-1]))
+    #print('Highest infection rate: ' + str(max(data_out)))
+    status = 'Highest infection rate: {} | Latest infection rate: {}'.format(str(max(data_out)), str(data_out[-1]))
+    return data_out, status

@@ -149,13 +149,15 @@ def plot_with_options():
     secondary_data_label = ''
 
     if form.grp_options.isChecked():
+        form.lbl_status_content.setText('Running.....')
         secondary_clear = False
         if form.tgl_plot_d_inc.isChecked():
             secondary_data = get_daily_change(primary_data)
             secondary_data_label = 'Daily Increase'
         if form.tgl_plot_inf_rt.isChecked():
-            secondary_data = get_infection_rate(primary_data)
+            secondary_data, status = get_infection_rate(primary_data)
             secondary_data_label = 'Infection Rate'
+            form.lbl_status_content.setText(status)
         if form.tgl_plot_recov.isChecked():
             secondary_data = get_data_of_country(RECOVERED_DATA, country_name)
             secondary_data_label = 'Recovered'
