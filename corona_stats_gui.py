@@ -5,10 +5,7 @@ from utilities import get_names_of_countries
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-import logging
 import random
-
-logging.basicConfig(filename='corona_stats.log', level=logging.INFO)
 
 
 class MplCanvas(FigureCanvas):
@@ -84,8 +81,8 @@ window = Window()
 form = Form()
 form.setupUi(window)
 visualization = MplCanvas(width=5, height=4, dpi=100)
-sld_min_template = 'Min: '
-sld_max_template = 'Max: '
+sld_min_prefix = 'Min: '
+sld_max_prefix = 'Max: '
 
 
 def populate_country_lists():
@@ -106,12 +103,12 @@ def setup_sliders():
     max_str = DATE_FIELDS[-1]
     slider_length = len(DATE_FIELDS)
 
-    form.lbl_sld_min.setText(sld_min_template + min_str)
+    form.lbl_sld_min.setText(sld_min_prefix + min_str)
     form.sld_min.setMinimum(0)
     form.sld_min.setMaximum(slider_length - 1)
     form.sld_min.setSliderPosition(0)
 
-    form.lbl_sld_max.setText(sld_max_template + max_str)
+    form.lbl_sld_max.setText(sld_max_prefix + max_str)
     form.sld_max.setMinimum(0)
     form.sld_max.setMaximum(slider_length - 1)
     form.sld_max.setSliderPosition(slider_length - 1)
@@ -221,12 +218,14 @@ def option_handler():
 
 def max_slider_handler():
     value = form.sld_max.value()
-    form.lbl_sld_max.setText(sld_max_template + DATE_FIELDS[value])
+    form.lbl_sld_max.setText(sld_max_prefix + DATE_FIELDS[value])
+    #plot_with_options()
 
 
 def min_slider_handler():
     value = form.sld_min.value()
-    form.lbl_sld_min.setText(sld_min_template + DATE_FIELDS[value])
+    form.lbl_sld_min.setText(sld_min_prefix + DATE_FIELDS[value])
+    #plot_with_options()
 
 
 def connect_signals():
