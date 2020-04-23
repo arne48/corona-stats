@@ -1,6 +1,4 @@
 import sys
-from builtins import map
-
 from PyQt5.QtWidgets import (QApplication, QDialog, QComboBox, QStyleFactory, QLabel, QHBoxLayout, QGridLayout,
                              QCheckBox, QGroupBox, QTreeWidget, QBoxLayout, QTreeWidgetItem)
 from arcgis_wrapper import ArcGisWrapper
@@ -20,7 +18,7 @@ class JapanCoronaInfoWidget(QDialog):
 
         self.feature_checkboxes = dict()
         self._create_feature_selection_checkbox_group()
-        self._create_treeview()
+        self.data_treeview = QTreeWidget()
         self._update_treeview('Prefecture_Ja')
 
         sort_combo_box = QComboBox()
@@ -56,11 +54,7 @@ class JapanCoronaInfoWidget(QDialog):
             layout.addWidget(t)
         self.feature_selection_groupbox.setLayout(layout)
 
-    def _create_treeview(self):
-        self.data_treeview = QTreeWidget()
-
     def _main_feature_changed(self, feature_name):
-        name = feature_name
         self._update_treeview(str(feature_name))
 
     def _update_treeview(self, root_feature):

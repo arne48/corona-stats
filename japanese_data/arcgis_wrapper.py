@@ -11,7 +11,7 @@ class ArcGisWrapper(object):
     def __init__(self, url, save_path='./', max_age_hrs=3):
         self.max_age_hrs = max_age_hrs
         data = self._get_xhr_from_link(url, save_path=save_path)
-        self.__dict__ = json.loads(data, parse_int=self._to_string, parse_float=self._to_string)
+        self.__dict__ = json.loads(data, parse_int=self._parse_to_string, parse_float=self._parse_to_string)
 
     def get_features_grouped_by_name(self, selected_feature):
         ret = dict()
@@ -30,7 +30,7 @@ class ArcGisWrapper(object):
         return ret
 
     # GUI only needs strings and mixups from datasource might screw with sorting functions later
-    def _to_string(self, param):
+    def _parse_to_string(self, param):
         return str(param)
 
     def _read_file(self, raw_url):
