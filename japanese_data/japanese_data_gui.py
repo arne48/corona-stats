@@ -1,4 +1,5 @@
 import sys
+import datetime
 from PyQt5.QtWidgets import (QApplication, QDialog, QComboBox, QLabel, QHBoxLayout, QGridLayout,
                              QCheckBox, QGroupBox, QTreeWidget, QTreeWidgetItem)
 from arcgis_wrapper import ArcGisWrapper
@@ -14,6 +15,7 @@ class JapanCoronaInfoWidget(QDialog):
         super(JapanCoronaInfoWidget, self).__init__(parent)
 
         self.dataset = ArcGisWrapper(DATA_URL)
+        self._adjust_attributes()
         self.feature_names = self.dataset.get_fields()
 
         self.feature_checkboxes = dict()
@@ -40,6 +42,14 @@ class JapanCoronaInfoWidget(QDialog):
 
         self.setLayout(main_layout)
         self.setWindowTitle('Case Information for Japan')
+
+    def _adjust_attributes(self):
+        for f in self.dataset.features:
+            j_date = f['attributes']['Date']
+            if j_date != 'N.A.':
+                # Cut first 10 characters from json date to allow epoch conversion
+                date_str = datetime.datetime.fromtimestamp(int(j_date[:10])).strftime('%x')
+                f['attributes']['Date'] = date_str
 
     def _create_feature_selection_checkbox_group(self):
         self.feature_selection_groupbox = QGroupBox('Feature selection')
