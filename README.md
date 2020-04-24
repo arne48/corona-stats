@@ -5,5 +5,5 @@
 ./corona_stats_gui.py
 
 ## Listing and Sorting the data of the Japanese government
-![jhu_viz](https://raw.githubusercontent.com/arne48/corona-stats/master/images/japan_info.png)
+![japan_info](https://raw.githubusercontent.com/arne48/corona-stats/master/images/japan_info.png)
 ./japanese_data/japanese_data_gui.py
