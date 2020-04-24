@@ -1,6 +1,6 @@
 import sys
-from PyQt5.QtWidgets import (QApplication, QDialog, QComboBox, QStyleFactory, QLabel, QHBoxLayout, QGridLayout,
-                             QCheckBox, QGroupBox, QTreeWidget, QBoxLayout, QTreeWidgetItem)
+from PyQt5.QtWidgets import (QApplication, QDialog, QComboBox, QLabel, QHBoxLayout, QGridLayout,
+                             QCheckBox, QGroupBox, QTreeWidget, QTreeWidgetItem)
 from arcgis_wrapper import ArcGisWrapper
 
 DATA_URL = 'https://services8.arcgis.com/JdxivnCyd1rvJTrY/arcgis/rest/services/v2_covid19_list_csv/FeatureServer/0/'\

@@ -83,19 +83,26 @@ form.setupUi(window)
 visualization = MplCanvas(width=5, height=4, dpi=100)
 sld_min_prefix = 'Min: '
 sld_max_prefix = 'Max: '
+global_death_rate = 0.0
 
 
 def populate_country_lists():
     # Add Countries
     country_list = get_names_of_countries(CONFIRMED_DATA)
+    death_rates = list()
     for n in country_list:
-        itm = QListWidgetItem(n)
-        form.lst_country_main.addItem(itm)
-        form.lst_country_main.setCurrentRow(0)
-    for n in country_list:
-        itm = QListWidgetItem(n)
-        form.lst_country_sec.addItem(itm)
-        form.lst_country_sec.setCurrentRow(0)
+        total_cases = get_data_of_country(CONFIRMED_DATA, n)[-1]
+        total_deaths = get_data_of_country(DEATH_DATA, n)[-1]
+        death_rate = total_deaths/total_cases
+        death_rates.append(death_rate)
+        itm1 = QListWidgetItem('{} ({:f})'.format(n, death_rate))
+        form.lst_country_main.addItem(itm1)
+        itm2 = QListWidgetItem('{} ({:f})'.format(n, death_rate))
+        form.lst_country_sec.addItem(itm2)
+    form.lst_country_main.setCurrentRow(0)
+    form.lst_country_sec.setCurrentRow(0)
+    form.lbl_status_content.setText('Global death rate is {:f}'.format(sum(death_rates) / len(death_rates)))
+    return sum(death_rates) / len(death_rates)
 
 
 def setup_sliders():
@@ -124,8 +131,8 @@ def plot_with_options():
     min_value = form.sld_min.value()
     max_value = form.sld_max.value()
 
-    # Get Primary Data
-    country_name = form.lst_country_main.selectedItems()[0].text()
+    # Get Primary Data and split country name from the appended death rate
+    country_name = str(form.lst_country_main.selectedItems()[0].text()).split(' ')[0]
     primary_data = get_data_of_country(CONFIRMED_DATA, country_name)
 
     # Check for additional Primary Data
@@ -146,7 +153,7 @@ def plot_with_options():
     secondary_data_label = ''
 
     if form.grp_options.isChecked():
-        form.lbl_status_content.setText('Running.....')
+        form.lbl_status_content.setText('Global death rate is {:f}'.format(global_death_rate))
         secondary_clear = False
         if form.tgl_plot_d_inc.isChecked():
             secondary_data = get_daily_change(primary_data)
@@ -236,7 +243,7 @@ def connect_signals():
     form.sld_min.valueChanged.connect(min_slider_handler)
 
 
-populate_country_lists()
+global_death_rate = populate_country_lists()
 attach_mpl_viz()
 setup_sliders()
 connect_signals()
