@@ -46,7 +46,7 @@ class ArcGisWrapper(object):
         file_path = save_path + DATA_FILE_NAME
         if os.path.isfile(file_path) and self._is_file_cache_fresh(file_path, SEC_PER_HR * self.max_age_hrs):
             body = ''
-            with open(file_path, 'r') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 body = f.read()
             f.close()
             # Prevent NoneType ending up as keys in our dicts
@@ -54,7 +54,7 @@ class ArcGisWrapper(object):
         else:
             # Prevent NoneType ending up as keys in our dicts
             body = self._read_file(url).replace(':null,', ':"N.A.",')
-            with open(file_path, 'w') as f:
+            with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(body)
             f.close()
             return body
