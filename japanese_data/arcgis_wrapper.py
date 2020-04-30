@@ -7,7 +7,7 @@ SEC_PER_HR = 3600.0
 DATA_FILE_NAME = 'data.xhr'
 
 
-class ArcGisWrapper(object):
+class ArcGISWrapper(object):
     def __init__(self, url, save_path='./', max_age_hrs=3):
         self.max_age_hrs = max_age_hrs
         data = self._get_xhr_from_link(url, save_path=save_path)
