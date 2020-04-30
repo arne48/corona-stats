@@ -2,7 +2,7 @@
 
 ## Plotting of the JHU data
 ![jhu_viz](https://github.com/arne48/corona-stats/raw/master/images/jhu_viz.png)
-./corona_stats_gui.py
+./corona_stats_gui.py [Country names "name ($Deathrate = total deaths / total cases$)"]
 
 ## Listing and Sorting the data of the Japanese government
 ![japan_info](https://github.com/arne48/corona-stats/raw/master/images/japan_info.png)
