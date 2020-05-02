@@ -24,7 +24,6 @@ class JapanCoronaInfoWidget(QDialog):
         self._create_feature_selection_checkbox_group()
         self._connect_feature_selection_checkboxes()
         self.data_treeview = QTreeWidget()
-        self._update_treeview()
 
         sort_combo_box = QComboBox()
         sort_combo_box.addItems(self.feature_names)
@@ -36,14 +35,15 @@ class JapanCoronaInfoWidget(QDialog):
         top_layout.addWidget(sort_label)
         top_layout.addWidget(sort_combo_box)
 
-        main_layout = QGridLayout()
-        main_layout.addLayout(top_layout, 0, 0)
-        main_layout.addWidget(self.feature_selection_groupbox, 1, 0)
-        main_layout.addWidget(self.data_treeview, 2, 0)
+        self.main_layout = QGridLayout()
+        self.main_layout.addLayout(top_layout, 0, 0)
+        self.main_layout.addWidget(self.feature_selection_groupbox, 1, 0)
+        self.main_layout.addWidget(self.data_treeview, 2, 0)
 
         sort_combo_box.activated[str].connect(self._main_feature_changed)
+        self._update_treeview()
 
-        self.setLayout(main_layout)
+        self.setLayout(self.main_layout)
         self.setWindowTitle(window_title)
 
     def _adjust_attributes(self):
@@ -84,7 +84,9 @@ class JapanCoronaInfoWidget(QDialog):
         self._update_treeview()
 
     def _create_treeview_headers(self, root_feature):
-        self.data_treeview.clear()
+        self.data_treeview = QTreeWidget()
+        self.main_layout.addWidget(self.data_treeview, 2, 0)
+
         headers = self.feature_names.copy()
 
         # FIXME
