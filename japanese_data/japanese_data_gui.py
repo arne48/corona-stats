@@ -41,7 +41,7 @@ class JapanCoronaInfoWidget(QDialog):
         self.main_layout.addWidget(self.data_treeview, 2, 0)
 
         sort_combo_box.activated[str].connect(self._main_feature_changed)
-        self._update_treeview()
+        self._update_gui_on_change()
 
         self.setLayout(self.main_layout)
         self.setWindowTitle(window_title)
@@ -67,13 +67,18 @@ class JapanCoronaInfoWidget(QDialog):
             layout.addWidget(t)
         self.feature_selection_groupbox.setLayout(layout)
 
+    def _update_gui_on_change(self):
+        # TODO disable sorting feature checkbox
+        # .... some code ....
+        self._update_treeview()
+
     def _update_checkbox_states(self):
         for cb in self.feature_checkboxes:
             if self.feature_checkboxes[cb]['handle'].checkState() == Qt.Checked:
                 self.feature_checkboxes[cb]['enabled'] = True
             else:
                 self.feature_checkboxes[cb]['enabled'] = False
-        self._update_treeview()
+        self._update_gui_on_change()
 
     def _connect_feature_selection_checkboxes(self):
         for cb in self.feature_checkboxes:
@@ -81,22 +86,19 @@ class JapanCoronaInfoWidget(QDialog):
 
     def _main_feature_changed(self, feature_name):
         self.sorting_feature_name = feature_name
-        self._update_treeview()
+        self._update_gui_on_change()
 
     def _create_treeview_headers(self, root_feature):
+        # Create new TreeWidget to purge the headers as well
         self.data_treeview = QTreeWidget()
         self.main_layout.addWidget(self.data_treeview, 2, 0)
 
-        headers = self.feature_names.copy()
+        headers = [root_feature]
+        for n, feature_name in enumerate(self.feature_names):
+            # If column is enabled add it to the header list
+            if self.feature_checkboxes[feature_name]['enabled'] is True and feature_name != self.sorting_feature_name:
+                headers.append(feature_name)
 
-        # FIXME
-        test_headers = headers.copy()
-        for n, feature_name in enumerate(test_headers):
-            # If column is disabled or sorting feature remove the column from header
-            if self.feature_checkboxes[feature_name]['enabled'] is False:
-                test_headers.pop(n)
-
-        headers.insert(0, root_feature)
         self.data_treeview.setHeaderLabels(headers)
 
     def _fill_treeview(self, case_data):
@@ -106,15 +108,12 @@ class JapanCoronaInfoWidget(QDialog):
             for case in case_data[d]:
                 sub_item = QTreeWidgetItem(tree_root)
                 sub_item.setText(0, str(d))
-                # FIXME
-                # offset = 0
+                offset = 0
                 for column, case_item in enumerate(case):
-                    sub_item.setText(column + 1, str(case[case_item]))
-                    # FIXME
-                    # if self.feature_checkboxes[case_item]['enabled'] is True:
-                    #     sub_item.setText(column + 1 - offset, str(case[case_item]))
-                    # else:
-                    #     offset = offset + 1
+                    if self.feature_checkboxes[case_item]['enabled'] is True and case_item != self.sorting_feature_name:
+                        sub_item.setText(column + 1 - offset, str(case[case_item]))
+                    else:
+                        offset = offset + 1
 
     def _update_treeview(self):
         case_data = self.dataset.get_features_grouped_by_name(self.sorting_feature_name)
