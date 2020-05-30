@@ -95,7 +95,7 @@ class JapanCoronaInfoWidget(QDialog):
 
         headers = [root_feature]
         for n, feature_name in enumerate(self.feature_names):
-            # If column is enabled add it to the header list
+            # If column is enabled and not the sorting feature add it to the header list
             if self.feature_checkboxes[feature_name]['enabled'] is True and feature_name != self.sorting_feature_name:
                 headers.append(feature_name)
 
