@@ -217,7 +217,7 @@
    <widget class="QRadioButton" name="tgl_plot_recov">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>230</x>
       <y>30</y>
       <width>141</width>
       <height>22</height>
@@ -230,7 +230,7 @@
    <widget class="QRadioButton" name="tgl_plot_dead">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>230</x>
       <y>60</y>
       <width>101</width>
       <height>22</height>
@@ -243,7 +243,7 @@
    <widget class="QRadioButton" name="tgl_compare_countries">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>390</x>
       <y>60</y>
       <width>181</width>
       <height>22</height>
@@ -251,6 +251,19 @@
     </property>
     <property name="text">
      <string>Plot secondary Country</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="tgl_plot_drate">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot Death-Rate</string>
     </property>
    </widget>
   </widget>

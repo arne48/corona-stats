@@ -47,3 +47,13 @@ def get_infection_rate(data):
     #print('Highest infection rate: ' + str(max(data_out)))
     status = 'Highest infection rate: {} | Latest infection rate: {}'.format(str(max(data_out)), str(data_out[-1]))
     return data_out, status
+
+
+def get_death_rate(death_data, confirmed_data):
+    ret_val = list()
+    for n, d in enumerate(death_data):
+        if d < 1.0:
+            ret_val.append(0.0)
+        else:
+            ret_val.append(d / confirmed_data[n])
+    return ret_val

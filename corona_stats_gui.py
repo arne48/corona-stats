@@ -172,6 +172,9 @@ def plot_with_options():
             secondary_country_name = form.lst_country_sec.selectedItems()[0].text()
             secondary_data = get_data_of_country(CONFIRMED_DATA, secondary_country_name)
             secondary_data_label = secondary_country_name
+        if form.tgl_plot_drate.isChecked():
+            secondary_data = get_death_rate(get_data_of_country(DEATH_DATA, country_name), primary_data)
+            secondary_data_label = 'Death-Rate'
     else:
         secondary_clear = True
 
