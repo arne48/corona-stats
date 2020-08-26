@@ -158,6 +158,9 @@ def plot_with_options():
         if form.tgl_plot_d_inc.isChecked():
             secondary_data = get_daily_change(primary_data)
             secondary_data_label = 'Daily Increase'
+        if form.tgl_plot_d_dead.isChecked():
+            secondary_data = get_daily_change(get_data_of_country(DEATH_DATA, country_name))
+            secondary_data_label = 'Daily Deaths'
         if form.tgl_plot_inf_rt.isChecked():
             secondary_data, status = get_infection_rate(primary_data)
             secondary_data_label = 'Infection Rate'
