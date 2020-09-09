@@ -172,7 +172,7 @@ def plot_with_options():
             secondary_data = get_data_of_country(DEATH_DATA, country_name)
             secondary_data_label = 'Deaths'
         if form.tgl_compare_countries.isChecked():
-            secondary_country_name = form.lst_country_sec.selectedItems()[0].text()
+            secondary_country_name = str(form.lst_country_sec.selectedItems()[0].text()).split(' ')[0]
             secondary_data = get_data_of_country(CONFIRMED_DATA, secondary_country_name)
             secondary_data_label = secondary_country_name
         if form.tgl_plot_drate.isChecked():
