@@ -126,13 +126,19 @@ def attach_mpl_viz():
     form.vlay_viz.addWidget(visualization)
 
 
+def get_country_name(list_entry):
+    # Joining all components of the country selection list with spaces except
+    # the last part (death rate)
+    return ' '.join(str(list_entry).split(' ')[0:-1])
+
+
 def plot_with_options():
     # Get Limits
     min_value = form.sld_min.value()
     max_value = form.sld_max.value()
 
     # Get Primary Data and split country name from the appended death rate
-    country_name = str(form.lst_country_main.selectedItems()[0].text()).split(' ')[0]
+    country_name = get_country_name(form.lst_country_main.selectedItems()[0].text())
     primary_data = get_data_of_country(CONFIRMED_DATA, country_name)
 
     # Check for additional Primary Data
@@ -172,7 +178,7 @@ def plot_with_options():
             secondary_data = get_data_of_country(DEATH_DATA, country_name)
             secondary_data_label = 'Deaths'
         if form.tgl_compare_countries.isChecked():
-            secondary_country_name = str(form.lst_country_sec.selectedItems()[0].text()).split(' ')[0]
+            secondary_country_name = get_country_name(form.lst_country_sec.selectedItems()[0].text())
             secondary_data = get_data_of_country(CONFIRMED_DATA, secondary_country_name)
             secondary_data_label = secondary_country_name
         if form.tgl_plot_drate.isChecked():
