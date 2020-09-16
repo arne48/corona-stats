@@ -35,7 +35,7 @@ def get_daily_change(data):
 
 
 def get_infection_rate(data):
-    data_out = [0.0]
+    data_out = [1.0]
     for n, d in enumerate(data[1:]):
         if n > 0:
             try:
@@ -46,6 +46,10 @@ def get_infection_rate(data):
     #print('Last infection rate: ' + str(data_out[-1]))
     #print('Highest infection rate: ' + str(max(data_out)))
     status = 'Highest infection rate: {} | Latest infection rate: {}'.format(str(max(data_out)), str(data_out[-1]))
+    # find and replace 0.0 values and replace them with 1.0
+    for n, i in enumerate(data_out):
+        if i == 0.0:
+            data_out[n] = 1.0
     return data_out, status
 
 
