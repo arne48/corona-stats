@@ -93,7 +93,12 @@ def populate_country_lists():
     for n in country_list:
         total_cases = get_data_of_country(CONFIRMED_DATA, n)[-1]
         total_deaths = get_data_of_country(DEATH_DATA, n)[-1]
-        death_rate = total_deaths/total_cases
+
+        if total_cases > 0 and total_deaths > 0:
+            death_rate = total_deaths/total_cases
+        else:
+            death_rate = 0.0
+
         death_rates.append(death_rate)
         itm1 = QListWidgetItem('{} ({:f})'.format(n, death_rate))
         form.lst_country_main.addItem(itm1)
