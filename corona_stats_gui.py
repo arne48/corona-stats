@@ -1,11 +1,31 @@
+import logging
+import pandas as pd
+from github_raw import get_file_from_link
+from visualizer import show_single_country, compare_two_countries
+from utilities import *
+from metrics import *
+
 from PyQt5 import (uic, QtWidgets, QtCore)
 from PyQt5.QtWidgets import (QApplication, QCheckBox, QPushButton, QListWidget, QListWidgetItem, QWidget, QVBoxLayout)
-from corona_stats import *
 from utilities import get_names_of_countries
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 import random
+
+
+
+DEFAULT_CONFIRMED_PATH = 'https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
+DEFAULT_DEATHS_PATH = 'https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
+DEFAULT_RECOVERED_PATH = 'https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
+
+CONFIRMED_FILE = get_file_from_link(DEFAULT_CONFIRMED_PATH)
+DEATH_FILE = get_file_from_link(DEFAULT_DEATHS_PATH)
+RECOVERED_FILE = get_file_from_link(DEFAULT_RECOVERED_PATH)
+
+CONFIRMED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(CONFIRMED_FILE))
+DEATH_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(DEATH_FILE))
+RECOVERED_DATA, DATE_FIELDS = sanitize_data(pd.read_csv(RECOVERED_FILE))
 
 
 class MplCanvas(FigureCanvas):
